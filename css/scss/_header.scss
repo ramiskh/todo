@@ -1,0 +1,21 @@
+.header {
+	background-color: $headerBg;
+	padding: 16px 24px;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		display: inline-flex;
+		align-items: center;
+		font-size: 34px;
+		font-weight: 900;
+		text-decoration: none;
+		background-image: $gradient;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+	}
+}

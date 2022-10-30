@@ -1,0 +1,381 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #111936;
+  color: #d7dcec;
+  font-family: "Nunito Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.header, .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.main {
+  margin: 20px auto;
+  width: 100%;
+  padding: 0 16px;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.header {
+  background-color: #212946;
+  padding: 16px 24px;
+}
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 34px;
+  font-weight: 900;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#2196F3), to(#7c4dff));
+  background-image: linear-gradient(to right, #2196F3, #7c4dff);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.footer {
+  background-color: #212946;
+  font-size: 85%;
+  color: rgba(215, 220, 236, 0.4);
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px 24px;
+}
+
+.todo {
+  background-color: #1a223f;
+  padding: 20px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.todo__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.todo__button {
+  background-color: #29314f;
+  color: #7c4dff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: background-color 0.9s cubic-bezier(0.33, 1, 0.68, 1) 0s, color 0.9s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+  transition: background-color 0.9s cubic-bezier(0.33, 1, 0.68, 1) 0s, color 0.9s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+}
+.todo__button:hover {
+  background-color: #7c4dff;
+  color: #d7dcec;
+}
+@media (max-width: 600px) {
+  .todo__button {
+    font-size: 10px;
+    height: 40px;
+    padding: 0 16px;
+  }
+}
+.todo__form {
+  background-color: #111936;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 8px;
+  gap: 16px;
+}
+.todo__form-input {
+  background-color: transparent;
+  color: #d1c4e9;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 40px;
+  min-width: 50px;
+  margin: 0;
+  padding: 0 0 0 24px;
+  border: 0;
+  outline: none;
+}
+.todo__form-input::-webkit-input-placeholder {
+  color: #d7dcec;
+  opacity: 0.5;
+}
+.todo__form-input::-moz-placeholder {
+  color: #d7dcec;
+  opacity: 0.5;
+}
+.todo__form-input:-ms-input-placeholder {
+  color: #d7dcec;
+  opacity: 0.5;
+}
+.todo__form-input::-ms-input-placeholder {
+  color: #d7dcec;
+  opacity: 0.5;
+}
+.todo__form-input::placeholder {
+  color: #d7dcec;
+  opacity: 0.5;
+}
+.todo__form-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+@media (max-width: 600px) {
+  .todo__form-button {
+    font-size: 0;
+  }
+  .todo__form-button::before {
+    content: "+";
+    font-size: 16px;
+    font-weight: 900;
+  }
+}
+.todo__item {
+  background-color: #212946;
+  border: 1px solid rgba(189, 200, 240, 0.085);
+  border-radius: 8px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .todo__item {
+    padding: 8px;
+  }
+}
+.todo__name {
+  color: #bdc8f0;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.todo__check {
+  background-color: #111936;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.todo__check:hover {
+  opacity: 1;
+}
+.todo__check::before {
+  background-image: url("../img/check.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+.todo__delete {
+  background-color: transparent;
+  background-image: url("../img/trash.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 40px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.todo__delete:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.todo__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 8px;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .todo__control {
+    gap: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .todo__control .todo__button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.todo__item--done {
+  opacity: 0.5;
+  -webkit-transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.todo__item--done:hover {
+  opacity: 1;
+}
+.todo__item--done .todo__title {
+  text-decoration: line-through;
+}
+.todo__item--done .todo__check {
+  background-color: #7c4dff;
+  opacity: 1;
+}
+.todo__item--done .todo__check::before {
+  opacity: 1;
+}
